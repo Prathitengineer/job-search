@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Title section -->
+    <div class="title">Registration</div>
+    <div class="content">
+      <!-- Registration form -->
+      <form action="/signup" method="POST">
+        <div class="user-details">
+            <!-- Input for Full Name -->
+            <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="fullname" placeholder="Enter your name" required>
+            </div>
+            <!-- Input for Username -->
+            <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+            <!-- Input for Email -->
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" name="email1" placeholder="Enter your email" required>
+            </div>
+            <!-- Input for Phone Number -->
+            <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="number" name="phonenumber" placeholder="Enter your number" required>
+            </div>
+            <!-- Input for Password -->
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" name="password1" placeholder="Enter your password" required>
+            </div>
+            <!-- Input for Confirm Password -->
+            <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" name="password2" placeholder="Confirm your password" required>
+            </div>
+            <!-- Submit button -->
+            <div class="button">
+                <input type="submit" value="Submit">
+            </div>
+          </div>
+          <h3 style="font-size: 12px; color:brown">{{signtext}}</h3>
+        </div>
+    </form>
+    <form action="/signin">
+    <button type="submit">sign in</button>
+  </form>
+    </div>
+  </div>
+</body>
+</html>

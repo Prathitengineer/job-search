@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Title section -->
+    <div class="title">Registration</div>
+    <div class="content">
+      <!-- Registration form -->
+      <form action="\signin", method="POST">
+        <div class="user-details">
+          <!-- Input for Full Name -->
+          <!-- Input for Email -->
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" name = "emails" placeholder="Enter your email" required>
+          </div>
+          <!-- Input for Password -->
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name = "password1" placeholder="Enter your password" required>
+          </div>
+        <!-- Submit button -->
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+          <h3 style="font-size: 12px; color:brown">{{signtext}}</h3>
+      </form>
+      <form action="/signup">
+        <div class="button">
+      <button type="submit">sign up</button>
+    </div>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
